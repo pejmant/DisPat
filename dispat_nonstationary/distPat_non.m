@@ -230,12 +230,7 @@ for m1 = loop:-1:1
     node                  = vertcat(nodeI,nodeJ,nodeK);
     [wx, wy, wz]          = getPatternShape(node, par);
     
-    % test
-    %for kq =1:2601
-    %    if(nodeI(kq)==10 && nodeJ(kq)==10)
-    %        aaaaa=kq;
-    %    end
-    %end
+    
     
     
     % test 'moveHardData'
@@ -287,8 +282,8 @@ for m1 = loop:-1:1
                 %[Pattern, patternIdx] = findClosestInCluster(dataEvent, X, clusterIdx{idxNumber}, par,radonX, wieghtEvent);
                 Pattern    = X(idxNumber,:);
                 
-                hd_condition = hardDataMoved(wx(i,:), wy(i,:), wz(i,:));
-                Pattern(~isnan(hd_condition))=hd_condition(~isnan(hd_condition));
+                %hd_condition = hardDataMoved(wx(i,:), wy(i,:), wz(i,:));
+%                 Pattern(~isnan(hd_condition))=hd_condition(~isnan(hd_condition));
 %                 idxNumber = findClosestCluster(dataEvent, prototype);
 %                 [Pattern, cluster]   = createPattern(idxNumber, clusterModel, Z, X, Y, idx, Pat, cluster,radonX);
 %                 Pattern   = reshape(Pattern, 1, Pat^2);
@@ -300,8 +295,8 @@ for m1 = loop:-1:1
                     %[Pattern, patternIdx] = findClosestInCluster(dataEvent, X, clusterIdx{idxNumber}, par,radonX, wieghtEvent);
                     Pattern    = X(idxNumber,:);
                     
-                    hd_condition = hardDataMoved(wx(i,:), wy(i,:), wz(i,:));
-                    Pattern(~isnan(hd_condition))=hd_condition(~isnan(hd_condition));
+%                     hd_condition = hardDataMoved(wx(i,:), wy(i,:), wz(i,:));
+%                     Pattern(~isnan(hd_condition))=hd_condition(~isnan(hd_condition));
                     %idxNumber = findClosestCluster(dataEvent, prototype, wieghtEvent);
                     %[Pattern, patternIdx] = findClosestInCluster(dataEvent, X, clusterIdx{idxNumber}, par,radonX, wieghtEvent);
                 else
